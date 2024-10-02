@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piezoelectric Transducer Optimization for Energy Harvesting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Shape and Material Optimization of Piezoelectric Transducers for Energy Harvesting</h1>
+    </header>
+<article>
+    <nav>
+        <ul>
+            <li><a href="#abstract">Abstract</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#problem-statement">Problem Statement</a></li>
+            <li><a href="#objective">Objective</a></li>
+            <li><a href="#literature-survey">Literature Survey</a></li>
+            <li><a href="#methodology">Methodology</a></li>
+            <li><a href="#simulation">Simulation and Modeling</a></li>
+            <li><a href="#results">Results and Analysis</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#bibilography">Bibilography</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="abstract">
+            <h1>Abstract</h1>
+            <p>The increasing demand for sustainable and maintenance-free energy sources has led to the development of innovative energy harvesting technologies. This study focuses on designing and optimizing a MEMS-based energy harvesting device using piezoelectric materials to convert beta particle energy from a radioactive isotope into electrical energy. By varying the thickness, length, and width of the piezoelectric materials, the study aims to maximize displacement and voltage output. The device features a copper cantilever structure to efficiently capture electrons emitted by a Nickel-63 source.</p>
+        </section>
+        <section id="introduction">
+            <h1>Introduction</h1>
+            <p>The project focuses on developing a MEMS-based energy harvesting device that converts beta particle energy into electrical energy via the piezoelectric effect. This device aims to provide a long-term power solution for various applications, such as wireless sensor networks, portable electronics, and cell phones, offering a clean, free, and maintenance-free energy source throughout the device's lifetime.</p>
+        </section>
+        <section id="problem-statement">
+            <h1>Problem Statement</h1>
+            <p>Conventional batteries have a limited lifespan and power capacity, necessitating the development of devices that generate power for longer periods. The project addresses this need by designing and modeling a MEMS-based energy harvesting device to convert beta particle energy into electrical energy using the piezoelectric effect.</p>
+        </section>
+        <section id="objective">
+            <h1>Objective</h1>
+            <p>The main goal of this project is to maximize the energy harvested by optimizing the shape and material of the piezoelectric transducer. This involves:</p>
+            <ul>
+                <li>Modeling a MEMS-based energy harvesting device to convert beta particle energy from a radioactive isotope to electrical energy via the piezoelectric effect.</li>
+                <li>Varying the thickness, length, and width of piezoelectric materials to achieve maximum displacement and voltage.</li>
+                <li>Constructing a cantilever made of copper with dimensions of 500µm × 100µm × 2µm, chosen for its effectiveness in capturing most electrons.</li>
+            </ul>
+        </section>
+        <section id="literature-survey">
+            <h1>Literature Survey</h1>
+            <p>Energy harvesting technologies have gained significant attention over the past two decades as alternatives to conventional power sources for small-sized and low-power electronic devices. The need for periodic recharging or replacement of batteries has been a consistent issue for portable, remote, and implantable devices.</p>
+            <h1>Piezoelectric Energy Harvesting</h1>
+            <p><strong>Definition and Mechanism:</strong> Piezoelectric energy harvesting converts dynamic mechanical energy into electrical energy using piezoelectric materials. This method focuses on harvesting low-level energy (microwatts to milliwatts) to power low-power electronics.</p>
+            <p><strong>Advantages:</strong> Piezoelectric transduction is advantageous over thermal and solar harvesting because ambient vibrations are persistent due to operational conditions, making it reliable and useful in embedded systems where thermal and solar energy might be absent.</p>
+            <p><strong>Applications:</strong> Common applications include providing energy for low-power electronics such as embedded electronics, implantable biomedical devices, wireless sensor nodes, and portable electronics. These systems offer a permanent, autonomous power source, reducing costs associated with battery replacement and enabling deployment in remote or embedded locations.</p>
+        </section>
+        <section id="methodology">
+            <h1>Methodology</h1>
+            <p>The device is designed to convert beta particle energy into electrical energy through the piezoelectric effect. The cantilever's dimensions were optimized to enhance energy conversion efficiency. A copper cantilever, with dimensions 500 µm × 100 µm × 2 µm, was selected to effectively capture electrons from the Nickel-63 source.</p>
+
+        </section>
+        <section id="simulation">
+            <h1>Simulation and Modeling</h1>
+            <h1>Software: COMSOL Multiphysics</h1>
+            <p><strong>Objective:</strong> To maximize the harvested energy by optimizing the shape and material of the piezoelectric transducer.</p>
+            <p><strong>Method:</strong> The MEMS-based energy harvesting device was modeled to convert beta particle energy from the radioactive isotope into electrical energy via the piezoelectric effect.</p>
+            <h1>Materials Used:</h1>
+            <ul>
+                <li><strong>Piezoelectric Material:</strong> PVDF(Polyvinylidene Fluoride) PVDF is a polymer material which is flexible and lightweight.and ZnO(Zinc Oxide)ZnO is a semiconductor material that also exhibits piezoelectric properties.</li>
+                <li><strong>Substrate Material:</strong> Silicon, selected for its mechanical properties and compatibility with MEMS fabrication.</li>
+                <li><strong>Radioactive Isotope:</strong> Nickel (Ni), suitable for beta particle emission.</li>
+                <li><strong>Cantilever Material:</strong> Copper, dimensions 500 µm × 100 µm × 2 µm, chosen to capture electrons effectively.</li>
+                <li><strong>Electrodes:</strong> Gold, for excellent conductivity and inertness, ensuring efficient charge collection.</li>
+            </ul>
+            <p><strong>Parameters:</strong> Varying the thickness, length, and width of the piezoelectric materials to achieve maximum displacement and voltage.</p>
+        </section>
+        <section id="results">
+            <h1>Results and Analysis</h1>
+            <p>Initial simulations reveal that the dimensions of the piezoelectric materials significantly impact energy harvesting efficiency. The optimized device structure shows a substantial increase in voltage output and displacement, indicating its potential to power low-power electronic devices. Key findings include:</p>
+            <ul>
+                <li><strong>Displacement Magnitude (µm):</strong> The optimal dimensions of the piezoelectric cantilever were identified to maximize displacement.</li>
+                <li><strong>Electric Potential:</strong> Analysis of the relationship between displacement and electrical potential demonstrated enhanced energy conversion.</li>
+            </ul>
+<h1>Table 1: Voltage developed across piezoelectric material and deflection observed at the tip (for a fixed length of micro cantilever and varying piezo length of ZnO)</h1>
+<table>
+    <thead>
+        <tr>
+            <th>SL.no</th>
+            <th>LENGTH(μm)</th>
+            <th>VOLTAGE(V)</th>
+            <th>DEFLECTION(μm)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>500</td>
+            <td>0.0956</td>
+            <td>2.001</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>450</td>
+            <td>0.0963</td>
+            <td>2.011</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>400</td>
+            <td>0.0935</td>
+            <td>2.036</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>350</td>
+            <td>0.0916</td>
+            <td>2.149</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>300</td>
+            <td>0.0783</td>
+            <td>2.477</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>250</td>
+            <td>0.0679</td>
+            <td>3.092</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>200</td>
+            <td>0.0627</td>
+            <td>4.214</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>150</td>
+            <td>0.0506</td>
+            <td>6.125</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>100</td>
+            <td>0.0132</td>
+            <td>8.539</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>50</td>
+            <td>0.0654</td>
+            <td>12.05</td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>Table 2: Voltage developed across piezoelectric material and deflection observed at the tip (for a fixed length of micro cantilever and varying piezo thickness of ZnO)</h1>
+<table>
+    <thead>
+        <tr>
+            <th>SL.no</th>
+            <th>THICKNESS(μm)</th>
+            <th>VOLTAGE(V)</th>
+            <th>DEFLECTION(μm)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>2.0</td>
+            <td>0.0956</td>
+            <td>2.001</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2.5</td>
+            <td>0.148</td>
+            <td>1.414</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3.0</td>
+            <td>0.164</td>
+            <td>1.032</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>3.5</td>
+            <td>0.166</td>
+            <td>0.773</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>4.0</td>
+            <td>0.171</td>
+            <td>0.595</td>
+        </tr>
+    </tbody>
+</table>
+<h1>Table 3: Voltage developed across piezoelectric material and deflection observed at the tip (for a fixed length of micro cantilever and varying piezo length of PVDF)</h1>
+<table>
+    <thead>
+        <tr>
+            <th>SL.no</th>
+            <th>LENGTH(μm)</th>
+            <th>VOLTAGE(V)</th>
+            <th>DEFLECTION(μm)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>500</td>
+            <td>5.63 (0.2507)</td>
+            <td>30.7x10^4</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>450</td>
+            <td>15.5 (0.24)</td>
+            <td>15.6x10^4</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>300</td>
+            <td>15.6 (0.24)</td>
+            <td>6.54x10^4</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>200</td>
+            <td>15.6 (0.12)</td>
+            <td>1.92x10^4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>100</td>
+            <td>15.6 (0.10)</td>
+            <td>0.237x10^4</td>
+        </tr>
+    </tbody>
+</table>
+<h1>Table 4: Voltage developed across piezoelectric material and deflection observed at the tip (for a fixed length of micro cantilever and varying piezo thickness of PVDF)</h1>
+<table>
+    <thead>
+        <tr>
+            <th>SL.no</th>
+            <th>THICKNESS(μm)</th>
+            <th>VOLTAGE(V)</th>
+            <th>DEFLECTION(μm)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>2.0</td>
+            <td>5.63</td>
+            <td>3.07x10^5</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2.5</td>
+            <td>4.99</td>
+            <td>2.77x10^5</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3.0</td>
+            <td>4.35</td>
+            <td>2.45x10^5</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>3.5</td>
+            <td>3.72</td>
+            <td>2.14x10^5</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>4.0</td>
+            <td>3.1</td>
+            <td>1.85x10^5</td>
+        </tr>
+    </tbody>
+</table>
+        </section>
+        <section id="conclusion">
+            <h1>Conclusion</h1>
+            <p>The project demonstrates the potential of using piezoelectric materials to harvest energy from nuclear radiation. The simulation provides valuable insights into the design and optimization of piezoelectric energy harvesting devices. This offers a promising alternative to traditional batteries, with applications in powering low-power electronics.</p>
+        </section>
+        <section id="about-me">
+            <h1>Bibilography</h1>
+            <p> 1. Hui Li, Amit Lal, James Blanchard, 
+                Douglass Henderson, “Self reciprocating 
+                radioisotope powered cantilever”, journal 
+                of applied physis, volume 92, and no.2, 15 
+                July 2002, pp-1122-1127. </p> 
+                <p> 2. Amit Lal & James Blanchard, “The 
+                Daintiest Dynamos”,IEEE Spectrum, 
+                sept.2004,pp-38-41. </p>
+                <p>3. B.G Sheeparamatti, J.S. Kadadevarmath, 
+                R.B. sheeparamatti, “Modelling of 
+                Microcantilever based nuclear 
+                microbatteries”, NSTI Nanotech-2008, 
+                11th Annual Conference, 1-5 June 2008, 
+                Boston, USA. </p>
+                <p>4. Brian.D. Hahn. Daniel T.Valentine 
+                “essential Matlab for engineers and 
+                scientists”, pp-309-311.</p> 
+                <p>5. Suyog N Jagtap and Roy Paily, 
+                “Geometry Optimization of a MEMS
+                based Energy Harvesting Device” 
+                Proceeding of the 2011 IEEE Students'  
+                Technology Symposium 14-16 January, 
+                2011, IIT Kharagpur. </p>
+                <p>6. M. Guizzetti, V. Ferrari, D. Marioli and T. 
+                Zawada, “Thickness optimization of a 
+                piezoelectric converter for energy 
+                harvesting,” Proceedings of the COMSOL 
+                Conference, 2009. </p>
+                <p>7. W. Liao and T.H.NG, “Sensitivity 
+                analysis and energy harvesting for a self 
+                powered piezoelectric sensor,” Smart 
+                Structures Laboratory University of Hong 
+                Kong, vol. 16. </p>
+                <p>8. Rajesh Duggirala, Ronald G. Polcawich, 
+                Member, IEEE, Madan Dubey, and Amit 
+                Lal, Member, IEEE “Radioisotope Thin
+                Film Fueled Microfabricated 
+                Reciprocating Electromechanical Power 
+                Generator” Journal of micromechanical 
+                systems, VOL. 17, NO. 4, AUGUST 2008</p> 
+                <p>9. Stopping Powers for Electrons and 
+                Positrons, International Commission on 
+                Radiation Units and Measurements, 1984. </p>
+        </section>
+    </main>
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+</article>
+    <article>
+        <h1>Addendum</h1>
+        <p>
+            In creating this HTML document, I have chose to present my research paper titled 
+            "Shape and Material Optimization of Piezoelectric Transducers for Energy Harvesting." 
+            In This document I have used semantic HTML tags such as &lt;header&gt; for the main title 
+            and &lt;nav&gt; for navigation which allows users to easily jump between sections.
+        </p>
+    
+        <h1>Font Choices</h1>
+        <p>
+            I selected <strong>Arial</strong>, a sans-serif font, as it is having good readability and clean appearance. Sans-serif fonts are used 
+            due to clarity for online content.
+        </p>
+    
+        <h1>Heading and Text Sizes</h1>
+        <p>
+            For main title I have used a the font size of <strong>3em</strong>, so that it is visible with bigger font compared to other headings and it is easy to notice. For other section headings i used  size <strong>2em</strong>, so that i can show the difference as it is given we should not use any h2 tags. For paragraph i have used the size 
+            <strong>1.1em</strong>, so that we can easily identify that it is a paragraph. 
+        </p>
+    
+        <h1>Color Choices</h1>
+<p>
+    I chose a <strong>rgb(39, 118, 182)</strong> for background color for the body, Becuase it looks good and peacefull for my self so used it.The text color is set to <strong>white</strong>, so that the contrast will be high comparing with the background and which will ensure the readability. For navigation links, I have choosed  <strong>black</strong>, 
+    so that we can find them as links and differentiate them when compared to the other texts  
+    The navigation menu has a <strong>rgba(41, 133, 213, 0.397)</strong> background, 
+    so that it can appear as other section like navigation section which is easily differentiated with the main content.
+</p>
+        <h1>Margin and Padding Choices</h1>
+        <p>
+            The document's overall padding is set to <strong>20px</strong>, so that it creates a comfortable 
+            space between the content and the edges of the viewport.this will help us to set our text not clumsy alltogether. Headings have a margin-bottom of <strong>15px</strong>, which helps 
+            separate them from the following content and improves readability.The navigation has <strong>10px</strong> of padding to check that the links are 
+            spaced evenly and are easily clickable.
+        </p>
+    
+        <p>
+            In summary, I have used a combination of font choices, sizes, colors, and 
+            spacing so that it will create a well-structured and good looking visually good webpage. This design will enhance the user experience as he can navigate from one section to other easily as it is the research paper so users will definetly want to switch from one section to other so i have designed my web page and styled it like this.
+        </p>
+    </article>
+        
+</body>
+    
+</html>

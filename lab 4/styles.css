@@ -1,0 +1,71 @@
+/* styles.css */
+body {
+    background-color: rgb(39, 118, 182); /* Set background color to navy blue */
+    color: white; /* Change text color to white for better contrast */
+    font-family: Arial, sans-serif; /* Set a default font */
+    margin: 0;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3em; /* Make main title larger */
+    margin-bottom: 15px; /* Add some space below the title */
+}
+
+h1 {
+    font-size: 2em; /* Regular h1 size for other sections */
+    margin-bottom: 15px; /* Add some space below headings */
+}
+
+h2 {
+    font-size: 1.5em; /* Optional: increase size for subheadings */
+}
+
+p {
+    font-size: 1.1em; /* Increase font size for paragraphs */
+    line-height: 1.5; /* Improve line spacing */
+}
+
+nav {
+    background-color: rgba(41, 133, 213, 0.397); /* Set navigation background to navy blue */
+    padding: 10px; /* Add padding around navigation */
+}
+
+nav ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+nav ul li {
+    margin: 5px 0; /* Add some space between menu items */
+}
+
+nav ul li a {
+    color: black; /* Change link color to black */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1.1em; /* Set font size for navigation links */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+table {
+    width: 100%; /* Make tables full width */
+    border-collapse: collapse; /* Collapse borders */
+    margin-top: 20px; /* Add space above tables */
+}
+
+table, th, td {
+    border: 1px solid white; /* Set border color to white */
+}
+
+th, td {
+    padding: 10px; /* Add padding for table cells */
+    text-align: center; /* Center align text in table */
+}
+
+footer {
+    margin-top: 20px; /* Add space above footer */
+    text-align: center; /* Center align footer text */
+}
