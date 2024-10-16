@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mean and Median Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha384-bZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        margin: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .button:hover {
+        background-color: #2980b9;
+      }
+
+      .button-container {
+        text-align: center;
+      }
+
+      .container {
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "nav content aside"
+          "footer footer footer";
+        grid-template-rows: 100px 1fr 300px;
+        grid-template-columns: 20% 1fr 20%;
+        height: 100vh;
+      }
+
+      header {
+        grid-area: header;
+        background: rgb(28, 92, 156);
+        color: black;
+        text-align: center;
+        padding: 50px;
+        font-size: xx-large;
+        font-weight: bold;
+      }
+
+      nav {
+        grid-area: nav;
+        background: rgb(82, 87, 87);
+        color: #fff;
+        padding: 10px;
+      }
+
+      aside {
+        grid-area: aside;
+        background: #555;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .content {
+        grid-area: content;
+        background: #eee;
+        padding: 20px;
+      }
+
+      footer {
+        grid-area: footer;
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+
+      /* Media Queries for smaller screens */
+      @media screen and (max-width: 768px) {
+        .container {
+          grid-template-areas:
+            "header"
+            "nav"
+            "content"
+            "aside"
+            "footer";
+          grid-template-rows: 100px 1fr 1fr 1fr 100px;
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Mean and Median Calculator</header>
+      <nav>
+        <div class="button-container">
+          <a href="#" class="button">Home</a>
+          <a href="#" class="button">About</a>
+          <a href="#" class="button">Contact Us</a>
+        </div>
+      </nav>
+      <aside>
+        <h1>Shop Winter Gear...</h1>
+        <a href="https://www.amazon.com/Winter-Jacket-Mountain-Waterproof-Windproof/dp/B0B883ZQR7" target="_blank">
+          <img src="1.jpg" alt="Winter Jacket" style="max-width: 100%; height: auto; border-radius: 5px;" />
+        </a>
+        <p>Click the image to check out this awesome winter jacket!</p>
+
+        <a href="https://www.amazon.com/Beats-Studio3-Wireless-Over-Ear-Headphones/dp/B075G4YHDD?th=1" target="_blank">
+          <img src="2.jpg" alt="Headphones" style="max-width: 100%; height: auto; border-radius: 5px;" />
+        </a>
+        <p>Click the image to check out the stylish headphones!</p>
+      </aside>
+
+      <div class="content">
+        <h1>Enter Numbers</h1>
+        <textarea id="numberInput" rows="4" cols="50" placeholder="Enter numbers separated by commas..."></textarea>
+        <div>
+          <button id="calculateButton">Calculate Mean & Median</button>
+        </div>
+        <div id="results"></div>
+      </div>
+      <footer>
+        <p>Addendum:</p>
+        <h3>
+          This web page allows users to input a list of numbers and calculate the mean and median of those numbers.
+        </h3>
+        <p>
+          To use the calculator, simply enter your numbers in the provided text area, separating each number with a comma. For example, you can input "10, 20, 30, 40, 50". Once you've entered your numbers, click the "Calculate Mean & Median" button to see the results displayed below the input area.
+        </p>
+        <p>
+          The <strong>mean</strong> (or average) is calculated by adding all the numbers together and dividing by the total count of numbers. The <strong>median</strong> is the middle value in your list when it is arranged in numerical order. If there is an even number of values, the median is the average of the two middle numbers.
+        </p>
+        <p>
+          This tool is useful for quickly analyzing data sets, whether for academic purposes, data analysis, or personal budgeting. We encourage users to experiment with different sets of numbers to understand how mean and median can vary based on the data provided.
+        </p>
+        <p>Last updated: <span id="lastModified"></span></p>
+      </footer>
+    </div>
+
+    <script>
+      function calculateMean(numbers) {
+        const sum = numbers.reduce((acc, num) => acc + num, 0);
+        return sum / numbers.length;
+      }
+
+      function calculateMedian(numbers) {
+        numbers.sort((a, b) => a - b);
+        const mid = Math.floor(numbers.length / 2);
+        return numbers.length % 2 !== 0 ? numbers[mid] : (numbers[mid - 1] + numbers[mid]) / 2;
+      }
+
+      document.getElementById("calculateButton").addEventListener("click", function () {
+        const input = document.getElementById("numberInput").value;
+        const numbers = input.split(',').map(num => parseFloat(num.trim())).filter(num => !isNaN(num));
+
+        if (numbers.length === 0) {
+          document.getElementById("results").innerHTML = "Please enter valid numbers.";
+          return;
+        }
+
+        const mean = calculateMean(numbers);
+        const median = calculateMedian(numbers);
+        document.getElementById("results").innerHTML = `Mean: ${mean.toFixed(2)}<br>Median: ${median.toFixed(2)}`;
+      });
+
+      // Display last modified date
+      document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+  </body>
+</html>
