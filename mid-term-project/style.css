@@ -1,0 +1,130 @@
+/* style.css */
+
+/* Reset some default browser styles */
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eaeaea; /* Lighter background for contrast */
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #4a4a4a;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#story {
+  padding: 20px;
+  margin: 20px;
+  background: #ffffff; /* White background for clarity */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.question {
+  background: #f9f9f9; /* Subtle grey for question background */
+  border-left: 5px solid #007bff; /* Accent border for questions */
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#choices {
+  margin: 20px;
+  text-align: center;
+}
+
+button {
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  margin: 5px; /* Space between buttons */
+}
+
+button:nth-child(1) {
+  background: #28a745; /* Green */
+}
+
+button:nth-child(2) {
+  background: #007bff; /* Blue */
+}
+
+button:nth-child(3) {
+  background: #ffc107; /* Yellow */
+}
+
+button:nth-child(4) {
+  background: #dc3545; /* Red */
+}
+
+button:hover {
+  opacity: 0.9; /* Slight opacity change on hover */
+}
+
+#image {
+  text-align: center;
+  margin: 20px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #4a4a4a;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+#addendum {
+  margin: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #e1f5fe, #b3e5fc); /* Light blue gradient background */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+#addendum:hover {
+  transform: translateY(-5px); /* Subtle lift effect on hover */
+}
+
+#addendum h3 {
+  color: #0d47a1; /* Dark blue for the heading */
+  margin-bottom: 10px;
+}
+
+#addendum h4 {
+  color: #1976d2; /* Medium blue for subheadings */
+  margin-top: 15px;
+}
+
+#addendum p {
+  color: #555; /* Slightly lighter text color for readability */
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  #addendum {
+      padding: 15px;
+  }
+
+  #addendum h3, #addendum h4 {
+      font-size: 1.2em; /* Adjust font size for smaller screens */
+  }
+
+  #addendum p {
+      font-size: 0.9em; /* Adjust paragraph size for smaller screens */
+  }
+}
