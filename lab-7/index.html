@@ -87,51 +87,32 @@
     
 </head>
 <body>
+    <h1>Fill in the Mad Lib</h1>
+    <form action="/ITC505/lab-7" method="POST">
+        <label>Plural Noun:
+            <input type="text" name="pluralNoun" required>
+        </label>
+        <label>Adjective:
+            <input type="text" name="adjective" required>
+        </label>
+        <label>Verb:
+            <input type="text" name="verb" required>
+        </label>
+        <label>Color:
+            <input type="text" name="color" required>
+        </label>
+        <label>Animal:
+            <input type="text" name="animal" required>
+        </label>
+        <button type="submit">Submit</button>
+    </form>
 
-<form id="madLibForm">
-    <label>Plural Noun:
-        <input type="text" name="pluralNoun" required>
-    </label>
-    <label>Adjective:
-        <input type="text" name="adjective" required>
-    </label>
-    <label>Verb:
-        <input type="text" name="verb" required>
-    </label>
-    <label>Color:
-        <input type="text" name="color" required>
-    </label>
-    <label>Animal:
-        <input type="text" name="animal" required>
-    </label>
-    <button type="submit">Submit</button>
-</form>
-<div id="result"></div>
-
-<script>
-    document.getElementById('madLibForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const pluralNoun = event.target.pluralNoun.value;
-        const adjective = event.target.adjective.value;
-        const verb = event.target.verb.value;
-        const color = event.target.color.value;
-        const animal = event.target.animal.value;
-
-        if (!pluralNoun || !adjective || !verb || !color || !animal) {
-            alert('Please fill out ALL fields');
-            return;
-        }
-
-        const madLib = `Yesterday, a group of ${pluralNoun} gathered in the ${adjective} park to ${verb} under the ${color} sky. Suddenly, a wild ${animal} appeared and joined their joyful gathering.`;
-
-        document.getElementById('result').innerHTML = `
-            <h1>Submission Successful</h1>
-            <p>${madLib}</p>
-            <button onclick="window.location.reload()">Go Back to Form</button>
-        `;
-    });
-
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script>
         var x = document.lastModified;
         document.getElementById('lastModified').textContent = x;
     </script>
