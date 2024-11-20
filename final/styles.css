@@ -44,24 +44,24 @@ h1 {
 .tile {
     width: 60px;
     height: 60px;
-    background: #333333;
+    background: #000000; /* Black for lit tiles */
     border: 2px solid #444444;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #333333; /* Subtle shadow for depth */
     transition: background 0.3s ease, transform 0.2s;
 }
 
 /* Tiles - Hover Effect */
 .tile:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 10px #ffd700;
+    box-shadow: 0 0 10px #ffffff;
 }
 
 /* Tiles - Off State */
 .tile.is-off {
-    background: #ffd700;
-    box-shadow: inset 0 0 10px #ffffff;
+    background: #ffffff; /* White for off tiles */
+    box-shadow: inset 0 0 10px #cccccc; /* Subtle shadow for a glow effect */
 }
 
 /* Button */
