@@ -14,11 +14,30 @@
         <p id="message"></p>
     </main>
     
-    <footer>
-        <p>Last updated: 
-            <span id="lastModified"></span>
-        </p>
-    </footer>
+<section id="addendum">
+    <h2>Addendum</h2>
+    <p>
+        The development of the "Lights Out" game is quit exiting we need to build the game by implementing a row-by-row strategy to toggle tiles until the board is solved. The game will start with a board of rows displaying the tiles and we need to solve the game by clicking on the tiles until it is filled with the tiles and by clicking on the remaining two or three tiles we will get that our game is win popup message.
+    </p>
+    
+    <p>
+        The Aesthetic choices included a modern  background and interactive tile hover effects for a dynamic user experience. The classic black-and-white tile design was maintained to stay true to the original game.
+    </p>
+    <p>
+        Challenges included ensuring solvable random configurations and handling tile toggling, especially at edges. These were solved by simulating random clicks on an all-white board and using proper conditional checks for neighbors.
+    </p>
+    <p>
+        Overall, this project was a great learning experience, which involves in systematic problem-solving and the importance of balancing design with functionality.
+    </p>
+</section>
+
+<footer>
+    <p>Last updated: 
+        <span id="lastModified"></span>
+    </p>
+</footer>
+
+
     <script type="text/javascript">
          var x = document.lastModified;
          document.getElementById('lastModified').textContent = x;
