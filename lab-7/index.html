@@ -1,120 +1,198 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mad Lib</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mad Libs</title>
     <style>
-       
-
-    * {
+      /* CSS styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
-        font-family: 'Courier New', monospace;
-    }
-    
-    body {
-        background-color: #f0f8ff;
         color: #333;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 150vh;
-        padding: 25px;
-    }
-    
-    h1 {
-        font-size: 3em;
-        margin-bottom: 18px;
-        color: #152ed1;
-        text-align: center; 
-    }
-    
-    form {
-        display: flex;
-        flex-direction: column;
-        width: 340px;
-        padding: 30px;
-        border: 4px solid #11d0c3;
-        border-radius: 25px;
+      }
+
+      .container {
+        max-width: 600px;
+        margin-top: 80px;
+        margin-left: 400px;
+        padding: 20px;
         background-color: #fff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    label {
-        font-size: 1em;
-        color: #333;
-        margin-top: 10px;
-    }
-    
-    input[type="text"] {
-        width: 100%;
-        padding: 8px;
-        margin-top: 5px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1em;
-    }
-    
-    button[type="submit"] {
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        color: #3592d9;
+      }
+
+      form {
         margin-top: 20px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      select {
+        width: 80%;
         padding: 10px;
-        font-size: 1em;
-        color: #fff;
-        background-color: #cf0505;
+        border: 1px solid #151515;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+
+      button[type="submit"],
+      button {
+        padding: 10px 20px;
+        background-color: #445acc;
+        color: #0c0c0c;
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        transition: background-color 0.3s;
-    }
-    
-    button[type="submit"]:hover {
-        background-color: #9c1ac8;
-    }
-    
-    footer {
+      }
+
+      button[type="submit"]:hover,
+      button:hover {
+        background-color: #07ba34;
+      }
+
+      #sentence {
         margin-top: 20px;
-        font-size: 0.9em;
-        color: #666;
-    }
-    
-    footer span {
-        color: #333;
-        font-weight: bold;
-    }
+        display: none; /* Hide the story initially */
+      }
+
+      #madLibsSentence {
+        font-style: italic;
+      }
+
+      footer {
+        margin-top: 20px;
+        text-align: center;
+        color: #777;
+      }
     </style>
-    
-</head>
-<body>
-    <h1>Fill in the Mad Lib</h1>
-    <form action="/ITC505/lab-7" method="POST">
-        <label>Plural Noun:
-            <input type="text" name="pluralNoun" required>
-        </label>
-        <label>Adjective:
-            <input type="text" name="adjective" required>
-        </label>
-        <label>Verb:
-            <input type="text" name="verb" required>
-        </label>
-        <label>Color:
-            <input type="text" name="color" required>
-        </label>
-        <label>Animal:
-            <input type="text" name="animal" required>
-        </label>
-        <button type="submit">Submit</button>
-    </form>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Mad Libs</h1>
+      <!-- Form to collect inputs -->
+      <form id="madLibsForm">
+        <div class="form-group">
+          <label for="noun">Plural Noun:</label>
+          <input type="text" id="noun" name="noun" required />
+        </div>
+        <div class="form-group">
+          <label for="adjective">Adjectives:</label>
+          <select id="adjective" name="adjective" required>
+            <option value="Playing">Playing</option>
+            <option value="Swimming">Swimming</option>
+            <option value="Reading">Reading</option>
+            <option value="Writing">Writing</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="verb">Verb</label>
+          <input type="text" id="verb" name="verb" required />
+        </div>
+        <div class="form-group">
+          <label for="emotion">Color</label>
+          <select id="emotion" name="emotion" required>
+            <option value="">Select a color</option>
+            <option value="Orange">Orange</option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Yellow">Yellow</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="place">Animal</label>
+          <input type="text" id="place" name="place" required />
+        </div>
+        <button type="submit">Generate Story</button>
+      </form>
+
+      <p>Addendum:</p>
+      <ul>
+        <li>
+          The first step of creating and generating a web page i have used  HTML code and I have also applied some styling using css
+          , and then I also used javascript script to perfor some operations. like wen i click on the button it shouldhenerate some meaning full story
+          based on the inputs which the user provides in the webpage, and if I click the back button it wll also takes me back.
+        </li>
+        <li>
+          The second step of my assignment is i have runed it on my machine local computer so that i can check wether it is performing well or not before it self.
+        </li>
+        <li>
+          As a third step npm package is installed and running the same code in the terminal.
+        </li>
+        <li>
+          I have created a path"/ITC505/Lab-7",which will responds with
+          "index.html" in the "public" directory in the server.js.
+        </li>
+        <li>
+          Finally at the end we can click on the link and acess the webpage.
+        </li>
+      </ul>
+
+      <!-- This will hold the generated story -->
+      <div id="sentence" style="display: none">
+        <h3>Generated Story:</h3>
+        <p id="madLibsSentence"></p>
+        <button onclick="goBack()">Back</button>
+      </div>
+    </div>
+
+    <script>
+      // Function to generate the story based on input
+      function generateSentence(event) {
+        event.preventDefault();
+
+        // Collect input values
+        const noun = document.getElementById("noun").value;
+        const adjective = document.getElementById("adjective").value;
+        const verb = document.getElementById("verb").value;
+        const emotion = document.getElementById("emotion").value;
+        const place = document.getElementById("place").value;
+
+        // Generate the story
+        const sentence = `Yesterday, a group of' ${noun} gathered in the ${adjective} park to ${verb} under the ${emotion}, sky. Suddenly, a wild ${place} appeared and joined their joyful gathering.`;
+
+        // Display the generated story
+        document.getElementById("madLibsSentence").innerText = sentence;
+        document.getElementById("madLibsForm").style.display = "none"; // Hide the form
+        document.getElementById("sentence").style.display = "block"; // Show the story
+      }
+
+      // Function to reset the form and go back to the input view
+      function goBack() {
+        document.getElementById("madLibsForm").reset();
+        document.getElementById("madLibsForm").style.display = "block"; // Show the form again
+        document.getElementById("sentence").style.display = "none"; // Hide the story
+      }
+
+      // Add event listener to the form
+      document
+        .getElementById("madLibsForm")
+        .addEventListener("submit", generateSentence);
+    </script>
 
     <footer>
-        <p>Last updated: 
-            <span id="lastModified"></span>
-        </p>
+      <p>
+        Last updated:
+        <span id="lastModified"></span>
+      </p>
     </footer>
-    <script>
-        var x = document.lastModified;
-        document.getElementById('lastModified').textContent = x;
+
+    <script type="text/javascript">
+      var x = document.lastModified;
+      document.getElementById("lastModified").textContent = x;
     </script>
-</body>
+  </body>
 </html>
